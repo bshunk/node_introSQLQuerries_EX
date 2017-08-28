@@ -5,8 +5,9 @@
 //    answer: INSERT INTO artist (artistId, artistName, yearEstablished)
 //            VALUES (29, 'Rebelution', 1999)
 
+// 3. Using the INSERT statement, add one, or more, albums by your artist to the Album table.
+//    answer: 
 // 
-
 
 
 
