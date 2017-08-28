@@ -21,6 +21,8 @@
 //    (SELECT a.Title, s.Title FROM Album a LEFT JOIN Song s ON s.AlbumId = a.AlbumId;)
 //    (SELECT a.Title, s.Title FROM Song s LEFT JOIN Album a ON s.AlbumId = a.AlbumId;)
 
-
-
+//    ANSWER: SELECT s.title, al.Title, ar.artistName
+//            FROM song s LEFT JOIN artist ar, album al ON al.albumID = s.albumID
+//            WHERE ar.artistName = 'Rebelution'
+//            AND al.artistID = ar.artistID
 
