@@ -21,9 +21,19 @@
 //    (SELECT a.Title, s.Title FROM Album a LEFT JOIN Song s ON s.AlbumId = a.AlbumId;)
 //    (SELECT a.Title, s.Title FROM Song s LEFT JOIN Album a ON s.AlbumId = a.AlbumId;)
 
-//    ANSWER: SELECT s.title, al.Title, ar.artistName
-//            FROM artist ar, album al LEFT JOIN song s ON al.albumID = s.albumID
-//            WHERE ar.artistName = 'Rebelution'
-//            AND al.artistID = ar.artistID
+//    ANSWER: SELECT s.title AS "Song", al.Title AS "Album", ar.artistName AS "Band"
+//    SELECT s.title AS "Song", al.Title AS "Album", ar.artistName AS "Band"
+//    FROM artist ar
+//    JOIN album al ON al.ArtistId = ar.ArtistId
+//    LEFT JOIN SONG s ON al.AlbumId = s.albumId
+//    WHERE ar.artistName = 'Rebelution'
+
+// 6. Write a SELECT statement to display how many songs exist for each album. You'll need to use the COUNT() function and the GROUP BY 
+//    keyword sequence.
+
+//    answer: SELECT count(songId), a.title
+//            FROM song s
+//            LEFT JOIN album a ON s.albumId = a.albumId
+//            GROUP BY s.albumId
 
 
