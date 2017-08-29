@@ -36,4 +36,23 @@
 //            LEFT JOIN album a ON s.albumId = a.albumId
 //            GROUP BY s.albumId
 
+// 7. Write a SELECT statement to display how many songs exist for each artist. You'll need to use the COUNT() function and the GROUP BY 
+//    keyword sequence.
 
+//    answer: SELECT a.title, COUNT(songId)
+//    FROM song s
+//    LEFT JOIN album a ON s.albumId = a.albumId
+//    GROUP BY s.albumId
+//    ORDER BY COUNT(songId)
+
+// 9. Using MAX() function, write a select statement to find the album with the longest duration. The result should display the album 
+//    title and the duration.
+//    answer: SELECT albumLength, title
+//            FROM album
+//            WHERE albumLength = (SELECT MAX(albumLength) from album);
+
+// 10. Using MAX() function, write a select statement to find the song with the longest duration. The result should display the song 
+//     title and the duration. 
+//     answer: SELECT songLength, title
+//             FROM song
+//             WHERE songLength = (SELECT MAX(songLength) from song);
